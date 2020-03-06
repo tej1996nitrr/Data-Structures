@@ -66,6 +66,32 @@ class LinkedList:
         prev.next = temp.next 
         temp = None 
 
+    def deleteNodePos(self,pos):
+        '''Delete node from a position'''
+        if self.head == None:
+            return
+        temp = self.head
+        if pos==0:
+            self.head=temp.next
+            temp = None
+            return
+
+        # Find previous node of the node to be deleted 
+        for i in range(pos-1):
+            temp  = temp.next
+            if temp is None: 
+                break
+
+        # If position is more than number of nodes 
+        if temp is None: 
+            return 
+        if temp.next is None: 
+            return
+
+        next_ = temp.next.next
+        # Unlink the node from linked list 
+        temp.next = None
+        temp.next = next_
 
 if __name__=="__main__":
     l = LinkedList()
@@ -80,4 +106,8 @@ if __name__=="__main__":
     l.printList()
     l.deleteNodeKey(2)
     l.printList()
+    l.deleteNodePos(3)
+    l.printList()
 
+
+# %%
