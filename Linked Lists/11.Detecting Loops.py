@@ -25,6 +25,15 @@ class LinkedList:
             s.add(temp)
             temp=temp.next
         return False
+    def detectLoop2(self):
+        slow_p=self.head
+        fast_p=self.head
+        while slow_p and fast_p and fast_p.next :
+            slow_p = slow_p.next 
+            fast_p=fast_p.next.next 
+            if slow_p == fast_p:
+                print("Loop Found")
+                return
 llist = LinkedList() 
 llist.push(20) 
 llist.push(4) 
@@ -32,9 +41,9 @@ llist.push(15)
 llist.push(10) 
 llist.head.next.next.next.next = llist.head
 if( llist.detectLoop()): 
-    print ("Loop found") 
+    print ("Loop Found") 
 else : 
     print ("No Loop ") 
-
+llist.detectLoop2()
 
 # %%
