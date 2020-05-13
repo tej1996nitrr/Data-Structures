@@ -1,4 +1,4 @@
-#%%
+#%% 
 class Node:
     def __init__(self,data):
         self.data = data
@@ -19,7 +19,7 @@ class LinkedList:
         while(temp):
             print(temp.data)
             temp = temp.next    
-    
+
     def getlength(self):
         temp = self.head
         length=0
@@ -71,7 +71,6 @@ class LinkedList:
             ref_ptr = ref_ptr.next
         print (f"Node no. {n} from last is {main_ptr.data}") 
   
-
 if __name__=="__main__":
     l = LinkedList()   
     l.push(10)
