@@ -14,6 +14,7 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+
     def printList(self):
         temp = self.head
         while(temp):
