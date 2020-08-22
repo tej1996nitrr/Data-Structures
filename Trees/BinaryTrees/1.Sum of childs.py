@@ -1,4 +1,4 @@
-#%%
+
 class Node:
     def __init__(self, value):
         self.data = value
@@ -19,6 +19,7 @@ def update(root):
     root.data += rightsum
 
     return root.data
+
 
 def inorder(node):
     if node is None:
