@@ -5,18 +5,18 @@ class Node():
         self.right = None
         self.value = key
 
-def printTreeInorder(root):
-    if root:
-        printTreeInorder(root.left)
-        print(root.value)
-        printTreeInorder(root.right)
-
 def printTreePreorder(root):
     if root:
         print(root.value)
         printTreeInorder(root.left)
         printTreeInorder(root.right)  
-        
+
+def printTreeInorder(root):
+    if root:
+        printTreeInorder(root.left)
+        print(root.value)
+        printTreeInorder(root.right)
+      
 def printTreePostorder(root):
     if root:
         printTreeInorder(root.left)
