@@ -1,7 +1,7 @@
 '''Find all possible binary trees with given Inorder Traversal'''
 
 class Node:
-    def __init__(self,data):
+    def __init__(self, data):
         self.data  = data
         self.left = None
         self.right = None
